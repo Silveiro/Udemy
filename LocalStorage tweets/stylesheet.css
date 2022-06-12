@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(31, 28, 28);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: gainsboro;
+    text-align: center;
+}
+
+.main{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+h1, h2, h3 {
+    font-weight: 100;
+    margin: 2rem;
+}
+
+
+
+#ladoIzq{
+    padding: 2rem;
+    border: 1px;
+    border-color: white;
+    border-style: double;
+    border-radius: 53px;
+
+}
+
+input{
+    background-color: chocolate !important;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    text-transform: uppercase;
+    padding: 0.4rem;
+    margin-top: 3rem;
+}
+
+textarea{
+    border-radius: 5px;
+}
+
+.borrar-tweet{
+    background-color: rgb(174, 2, 2);
+    padding:0.2rem;
+    border-radius: 40%;
+    margin-left: 1rem;
+
+
+}
+li{
+    margin: 0.6rem;
+    text-align: left;  
+    ;  
+}

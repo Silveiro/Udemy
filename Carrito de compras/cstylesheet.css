@@ -1,0 +1,157 @@
+/* Header */ 
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0 0 0 0;
+}
+header{
+    background-color: rgb(94, 97, 245);
+    position: fixed;
+    width: 100%;
+}
+.parte-izq-header > img{
+    max-width: 10rem;
+}
+.parte-der-header  >img {
+    max-width: 1.5rem;
+}
+header{
+    display:flex;
+}
+.parte-izq-header{
+    flex-basis: 50%;
+}
+.parte-der-header{
+flex-basis: 50%;
+justify-content:space-evenly;
+}
+.parte-der-header > a {
+text-decoration: none;
+color: white;
+}
+.parte-der-header{
+display: flex;
+align-items: center;
+}
+#carrito{
+    display: none;
+    position: fixed;
+    top: 3.1rem;
+    right: 1rem;
+    background-color: rgb(255, 255, 255);
+    padding: 0.2rem 1rem 5rem 0.2rem;
+    border-radius: 0.4rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;}
+
+
+#lista-carrito > tbody > tr >td > img{
+    max-width: 5rem;
+    }
+#vaciar-carrito{
+    text-decoration: none;
+    border-color: black;
+    border-style: solid;
+    padding: 0.2rem 2rem 0.2rem 2rem;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    top: 4rem;
+}
+.borrar-curso{
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 100px;
+    text-decoration: none;
+}
+/* Fin Header */ 
+/* vitrina */ 
+.vitrina > img{
+    width: 100%;
+}
+/*Fin vitrina */ 
+/* cursos */ 
+#cursos{
+    display:grid;
+    grid-template-columns:  auto auto;
+    gap: 10px;
+}
+
+
+.curso{
+    margin: 1rem 2rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    border-color: rgb(177, 177, 177);
+    border-style:none;
+    border-width: 1px;
+    padding: 1rem 1rem 1rem 1rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;}
+.curso:hover{
+    margin: 0.8rem 1.8rem 0.8rem 1.8rem;  
+}
+.main-header > h1{
+    text-align: center;
+}
+
+.curso > button{
+    background-color: greenyellow;
+    border-radius: 1rem;
+    border-style: solid;
+}
+
+
+/* CSS */
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  min-width: 90px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;  
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+.curso > img{
+    width: 100%;
+}
