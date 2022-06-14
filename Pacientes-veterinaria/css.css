@@ -1,0 +1,40 @@
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(0, 136, 255) 100%); 
+    color: white;
+}
+h1{
+    text-align: center;
+}
+#main{
+    display: flex;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+form button{
+    background-color: green;
+    border: 0ch;
+    border-radius: 4px;
+    margin: 2rem;
+    color: white;
+}
+.red-border{
+    border-color: red;
+}
+.error{
+    padding: 1rem;
+    margin: 20px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    border: solid;
+    border-color: white;
+}
+.d-none{
+    display:none;
+}

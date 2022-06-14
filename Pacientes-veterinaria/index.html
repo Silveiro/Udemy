@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Pacientes-veterinaria/css.css">
+    
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 class="display-1">ADMINISTRADOR DE PACIENTES DE VETERINARIA</h1>
+
+    <div id="main">
+        <div id="izq">
+            <div>
+                <h2 class="display-2"> Datos del paciente</h2>
+                <form id="formulario">
+                    <div id="alerta"></div>
+                    <div id="alerta1"></div>
+                    <label for="nombre">Nombre Mascota</label>
+                    <input type="text" id="nombreMascota"><br>
+                    <label for="propietario">Nombre propietario</label>
+                    <input type="text" id="nombrePropietario"><br>
+                    <label for="telefono">Telefono</label>
+                    <input type="number" id="telefono"><br>
+                    <label for="fecha">Fecha</label>
+                    <input type="date" name="fecha" id="fecha"><br>
+                    <label for="fecha">Hora</label>
+                    <input type="time" name="hora" id="hora"><br>
+                    <label for="sintomas">Sintomas</label>
+                    <textarea name="sintomas" id="sintomas" cols="40" rows="10"></textarea><br>
+                    <button type="button" id="botonformulario"> Crear Cita</button>
+                </form>
+
+            </div>
+            <div id="der">
+                <h2></h2>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="/Pacientes-veterinaria/js.js"></script>
+</body>
+
+</html>
