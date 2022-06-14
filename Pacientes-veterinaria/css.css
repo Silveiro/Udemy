@@ -8,6 +8,7 @@ h1{
 }
 #main{
     display: flex;
+    flex-direction: row;
 
 }
 form{

@@ -14,7 +14,8 @@ function eventListeners() {
 //Clases
 
 class Cita {
-    constructor(nombreM, nombreP, hora, notas,celular, dia) {
+    constructor(id,nombreM, nombreP, hora, notas,celular, dia) {
+        this.id = id;
         this.nombreM = nombreM;
         this.nombreP = nombreP;
         this.hora = hora;
@@ -38,7 +39,9 @@ function validarDatos() {
     var fecha1 = new Date(fecha.value);
     var tel = Number(telefono.value);
     var x = new Date();
-    var nuevaCita = new Cita(nombreMascota,nombrePropietario,hora,sintomas);
+    var y = new Date();
+    var yy = y.getTime();
+    var nuevaCita = new Cita(yy,nombreMascota,nombrePropietario,hora,sintomas);
 
     
 
@@ -63,8 +66,9 @@ function validarDatos() {
         nuevaCita.fecha1 = fecha1;
 
     }
-    var nuevaCita = new Cita(nombreMascota,nombrePropietario,hora,sintomas,tel,fecha1);
+    var nuevaCita = new Cita(yy,nombreMascota,nombrePropietario,hora,sintomas,tel,fecha1);
     console.log(nuevaCita);
+    mostrarCitas(nuevaCita);
     formulario.reset();
 }
 
@@ -75,6 +79,12 @@ function alertar(mensaje) {
     setTimeout(() => {
         document.querySelector("#alerta").classList.add("d-none");
     }, 3000);
+}
+
+function mostrarCitas(obj){
+    const {id, nombreM, nombreP, hora, notas, celular,dia} = obj;
+    document.getElementById("der").innerHTML = nombreM + "<br>" + dia + "<br>" + hora + "<br>" + notas;
+
 }
 
 
