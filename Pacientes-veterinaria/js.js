@@ -1,6 +1,7 @@
 //const
 const formulario = document.querySelector("#formulario");
 const botonformulario = document.querySelector("#botonformulario");
+
 var arrcitas = [];
 
 //Event Listeners
@@ -90,9 +91,19 @@ function mostrarCitas(arreglo) {
         while (para.firstChild) {
             para.removeChild(para.firstChild);
         }
-        para.innerHTML ="<p>"+arreglo[i].id+"</p>"+"<p>"+arreglo[i].nombreM+"</p>"+"<p>"+arreglo[i].nombreP+"</p>"+"<p>"+"+"+arreglo[i].celular+"</p>"+"<p>"+arreglo[i].dia+"</p>"+arreglo[i].hora+"<p>"+arreglo[i].notas+"</p>"+"<button>"+"Eliminar"+"</button>";
+        para.innerHTML = "<p>" + arreglo[i].id + "</p>" + "<p>" + arreglo[i].nombreM + "</p>" + "<p>" + arreglo[i].nombreP + "</p>" + "<p>" + "+" + arreglo[i].celular + "</p>" + "<p>" + arreglo[i].dia + "</p>" + arreglo[i].hora + "<p>" + arreglo[i].notas + "</p>" + "<button id=\"botonEliminar\">" + "Eliminar" + "</button>";
         document.getElementById("der").appendChild(para);
+        const botonEliminar = document.querySelector("#botonEliminar");
+        botonEliminar.addEventListener("click", eliminarCitas);
+
+    }
+    function eliminarCitas() {
+        console.log(para);
     }
 
 }
+
+        
+        
+
 
