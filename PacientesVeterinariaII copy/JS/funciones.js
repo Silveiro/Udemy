@@ -26,6 +26,48 @@ export function datosCita(e) {
     citaObj[e.target.name] = e.target.value;
 }
 
+window.addEventListener("DOMContentLoaded", crearDB);
+let DB;
+function crearDB() {
+    //crear la BBDD en version 1.0
+    const crearDB = window.indexedDB.open("citas", 1);
+    //Si hay un error
+    crearDB.onerror = function () {
+        console.log("Hubo un error");
+    }
+    //Si todo sale bien 
+    crearDB.onsuccess = function () {
+        console.log("Todo salió bien");
+        DB = crearDB.result;
+        console.log(DB);
+    }
+
+
+    //Definir el Schema
+    crearDB.onupgradeneeded = function (e) {
+        const db = e.target.result;
+
+        const ObjectStore = db.createObjectStore("citas", {
+            keyPath: "id",
+            autoincrement: true,
+        });
+
+        //Definir todas las columnas
+        ObjectStore.createIndex("mascota", "mascota", {unique: false});
+        ObjectStore.createIndex("propietario", "propietario", {unique: false});
+        ObjectStore.createIndex("telefono", "telefono", {unique: false});
+        ObjectStore.createIndex("fecha", "fecha", {unique: false});
+        ObjectStore.createIndex("hora", "hora", {unique: false});
+        ObjectStore.createIndex("sintomas", "sintomas", {unique: false});
+        ObjectStore.createIndex("id", "id", {unique: true});
+
+        console.log("DataBase Creada y lista")
+    }
+}
+
+
+
+
 
 
 //valida y agrega una nueva cita a la clase de citas
@@ -52,12 +94,23 @@ export function nuevaCita(e) {
         editando = false;
         ui.imprimirCitas(administrarCitas);
     }else{
-        citaObj.id = Date.now();    
+        //Nuevo registro
+
+        citaObj.id = Date.now(); 
+
         administrarCitas.agregarCita({...citaObj});
         ui.imprimirCitas(administrarCitas);
+        //insertar registro en IndexedDB
+        
+        const transaction = DB.transaction(["citas"], "readwrite");
+        const objectStore = transaction.objectStore("citas");
+        objectStore.add(citaObj);
+        transaction.oncomplete = function(){
+            console.log("Cita Agregada");
+        }
 
     }
-    
+
 
     //reiniciar form 
     formulario.reset();
